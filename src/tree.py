@@ -23,10 +23,6 @@ class Tree:
         return False
 
     @property
-    def first_frame(self) -> int:
-        return 0
-
-    @property
     def last_frame(self) -> int:
         return len(self.frames) - 1
 
@@ -44,7 +40,7 @@ class Tree:
     def next_frame(self) -> None:
         self.update_frame_timer(value=0)
         if self.is_frame_last_frame(frame_number=self.current_frame_number):
-            self.current_frame_number = self.first_frame
+            self.current_frame_number = 0
             return
 
         self.current_frame_number += 1
