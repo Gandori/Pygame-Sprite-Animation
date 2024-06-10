@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = 'pygame-sprite-animation'
+version = '0.1.0'
+requires-python = '>=3.12'
+dependencies = [
+    'pygame==2.5.2',
+    'python-dotenv==1.0.1',
+    'pydantic==2.6.4',
+    'pydantic-settings==2.2.1',
+]
+
+[project.optional-dependencies]
+dev = [
+    'isort==5.13.2',
+    'black==24.3.0',
+    'pytest==8.1.1',
+    'pytest-asyncio==0.23.6',
+    'pytest-mock==3.14.0',
+]
+
+[tool.black]
+line-length = 88
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
