@@ -17,7 +17,7 @@ class Tree:
         ]
 
     @property
-    def time_for_next_frame(self) -> bool:
+    def is_time_for_next_frame(self) -> bool:
         if self.frame_timer >= self.frame_duration:
             return True
         return False

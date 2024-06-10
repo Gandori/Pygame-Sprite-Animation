@@ -50,7 +50,7 @@ class Pygame:
             self.display_fps()
 
             tree.update_frame_timer(value=tree.frame_timer + self.clock.get_time())
-            tree.next_frame() if tree.time_for_next_frame else None
+            tree.next_frame() if tree.is_time_for_next_frame else None
             tree.draw(window=self.window)
 
             self.clock.tick(self.fps)
